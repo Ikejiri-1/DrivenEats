@@ -12,6 +12,7 @@
   --price-color: #000000;
   --title-font: "Righteous", cursive;
   --text-font: "Roboto", sans-serif;
+  --selected-color: #32b72f;
 }
 body {
   background-color: #eeeeee;
@@ -112,12 +113,32 @@ img {
   width: 90%;
   padding: 8px 0;
   border-radius: 32px;
-  background-color: #cbcbcb;
   color: #ffffff;
   font-family: var(--text-font);
   font-weight: 400;
   font-size: 20px;
   line-height: 100%;
-  letter-spacing: 1.8%;
   border: none;
+}
+.finish-order__button:disabled {
+  background-color: #c1c1c1;
+}
+.active {
+  background-color: var(--selected-color);
+  width: 90%;
+  padding: 16px 0;
+  border-radius: 32px;
+  color: #ffffff;
+  font-family: var(--text-font);
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 100%;
+  border: none;
+}
+.item {
+  border: 2px solid var(--background-color);
+  border-radius: 8px;
+}
+.item.selected {
+  border: 4px solid var(--selected-color);
 }
