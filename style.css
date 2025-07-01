@@ -23,7 +23,7 @@ header {
   height: 92px;
 }
 main {
-  padding-top: 120px;
+  padding-top: 104px;
 }
 .header-title {
   font-family: var(--title-font);
@@ -52,6 +52,9 @@ main {
   letter-spacing: 1.8%;
   padding-bottom: 12px;
   padding-left: 16px;
+}
+.food-container {
+  margin-top: 16px;
 }
 .food-container__list {
   display: flex;
