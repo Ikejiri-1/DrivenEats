@@ -53,6 +53,41 @@ main {
   padding-bottom: 12px;
   padding-left: 16px;
 }
+.food-container__list {
+  display: flex;
+  gap: 16px;
+  padding-left: 16px;
+  list-style-type: none;
+  overflow-x: auto;
+}
+.food-container__list-item {
+  display: flex;
+  background-color: #ffffff;
+  padding: 16px;
+  border-radius: 8px;
+}
+.food-container__list-item-title {
+  font-family: var(--text-font);
+  color: var(--title-color);
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 100%;
+  margin: 8px 0;
+}
+.food-container__list-item-description {
+  font-family: var(--text-font);
+  font-weight: 300;
+  font-size: 15px;
+  color: var(--text-color);
+  margin-bottom: 12px;
+}
+.food-container__list-item-price {
+  color: var(--price-color);
+  font-family: var(--text-font);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 100%;
+}
 img {
   width: 144px;
   height: 87px;
