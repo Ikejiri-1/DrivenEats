@@ -91,7 +91,9 @@ function createCard() {
   confirmButton.textContent = "Tudo certo, pode pedir!";
   confirmButton.classList.add("confirm-button");
   buttons.appendChild(confirmButton);
-  confirmButton.addEventListener("click", sendToWhatsapp);
+  confirmButton.addEventListener("click", () => {
+    sendToWhatsapp(foodName, drinkName, dessertName, total);
+  });
 
   // Botão de cancelamento
   const opacityMain = document.querySelector("main");
@@ -129,5 +131,19 @@ function createRow(name, price, isTotal = false) {
   row.appendChild(priceSpan);
   return row;
 }
-function sendToWhatsapp() {}
+function sendToWhatsapp(foodName, drinkName, dessertName, total) {
+  askForFood(foodName, drinkName, dessertName, total);
+}
+function askForFood(foodName, drinkName, dessertName, total) {
+  const name = prompt("Qual o seu nome?");
+  const address = prompt("Qual o seu endereço?");
+  if (name && address) {
+    let message = `Olá, gostaria de fazer o pedido:\n- Prato: ${foodName} \n Bebida:${drinkName} \n Sobremesa: ${dessertName} \n Total: R$ ${total} \n Nome: ${name} \n Endereço: ${address}`;
+    window.open(
+      `https://wa.me/5512981211700?text=${encodeURIComponent(message)}`
+    );
+  } else {
+    alert("Por favor, preencha o nome e o endereço");
+  }
+}
 showCard();
