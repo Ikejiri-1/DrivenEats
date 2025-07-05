@@ -132,9 +132,9 @@ function createRow(name, price, isTotal = false) {
   return row;
 }
 function sendToWhatsapp(foodName, drinkName, dessertName, total) {
-  askForFood(foodName, drinkName, dessertName, total);
+  orderFood(foodName, drinkName, dessertName, total);
 }
-function askForFood(foodName, drinkName, dessertName, total) {
+function orderFood(foodName, drinkName, dessertName, total) {
   const name = prompt("Qual o seu nome?");
   const address = prompt("Qual o seu endereço?");
   if (name && address) {
